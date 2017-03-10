@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="/main.css">
+		<script type="text/javascript" src="gen_validatorv4.js"></script>
+		<style> 
+			body {
+         		background-image: url("/bg.jpg");
+         		background-repeat: no-repeat;
+         		background-position: right top;
+         		margin-right: 200px;
+			}
+		</style>
+    </head>
+    <div>
+   	<ul class="topnav" id="myTopnav">
+  	<li><a href="/">ホーム</a></li>
+  	<li><a href="/quote">日刊　モチベーション</a></li>
+  	<li><a href="/hotline">ホットライン</a></li>
+  	<li><a href="#about">詳しい情報</a></li>
+  	<li><a href="/registration">登録ページ</a></li>
+  	<li><a href="/kawaii">可愛い</a></li>
+  	<li><a href="/diary">日記</a></li>
+  	<li class="icon">
+    <a href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
+  	</li>
+	</ul>
+    </div>
+    <h1>登録ページ</h1>
+    <body class="container">
+    	<form id='register' method='POST'
+		accept-charset='UTF-8'>
+		<fieldset >
+		<legend>登録フォーム</legend>
+		<input type='hidden' name='submitted' id='submitted' value='1'/>
+		<div>
+		<label for='name' >お名前*: </label>
+		<input type='text' name='名前' id='name' maxlength="50" />
+		</div>
+		<div>
+		<label for='email' >電子メール*:</label>
+		<input type='text' name='電子メール' id='email' maxlength="50" />
+		</div>
+		<div>
+		<label for='username' >ユーザーネーム*:</label>
+		<input type='text' name='ユーザーネーム' id='username' maxlength="50" />
+		</div>
+		<div>
+		<label for='password' >パスワード*:</label>
+		<input type='password' name='パスワード' id='password' maxlength="50" />
+		</div>
+		<div>
+		<label for='passconf' >パスワード確認*:</label>
+		<input type='password' name='パスワード確認' id="passconf" maxlength="50"/>
+		</div>
+		<div>
+		<input type='submit' name='Submit' value='Submit' />
+		</div>
+		</fieldset>
+		</form>
+		<script type="text/javascript">
+			var frmvali = new Validator("register");
+			frmvali.addValidation("name","req","名前を入力してください");
+			frmvali.addValidation("email","req","電子メールを入力してください");
+			frmvali.addValidation("username","req","ユーザーネームを入力してください");
+			frmvali.addValidation("password","req","パスワードを入力してください");
+			frmvali.addValidation("passconf","req","パスワード確認を入力してください");
+			function dopasswordcheck() 
+			{
+				var frm = document.forms["register"];
+				if(frm.password.value != frm.passconf.value) {
+					sfm_show_error_msg("パスワード確認とパスワードを会ってないです",frm.passconf);
+					return false;
+				}
+				return true;
+			}
+		</script>
+    </body>
+</html>
