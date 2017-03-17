@@ -13,6 +13,11 @@
   	<li><a href="/">ホーム</a></li>
 	</ul>
   </div>
+ <div>
+ 	<form>
+ 		
+ 	</form>
+ </div>
 <body>
 <div id="wrapper">
 	<div id="body">
@@ -20,13 +25,12 @@
 			<div id="body-bot">
 				<div id="header">
 					<img src="matsu.jpg" width="332" height="453" alt="Pic 1" id="person" />
-				<h1>小林・愛子の日記</h1>
-				<h2>3月9日</h2>
-				<p>松潤と会いたいな。あの男はとてもかっこいい。私は大好き！</p> 
-				<h2>3月10日</h2>
-				<p>今日は松潤と話した。やっぱりすごかっただ。でもね、私の髪はちょっとめちゃくちゃで、綺麗じゃなかった。悲しい。</p>
-				<h2>3月11日</h2>
-				<p>今日は松潤を相談せず、結婚した。どうやってできたというと、松潤とベ-ガスに行って、松潤は寝ている間にお寺に入って、結婚していた。</p>						
+					<h1>今日の書きたいものを入力してください</h1>	
+					<form action="/write" method="POST">
+					<input type="date" name="diary[date]">
+					<input type="text" name="diary[entry]">
+					<input type="submit" value="Submit">	
+					</form>			
 				</div>
 			</div>
 		</div>

@@ -1,0 +1,29 @@
+<h1>Database Contents: Registration</h1>
+<ul>
+	<% @registrations.each do |model| %>
+		<li>
+		<%= model.name %>
+		<%= model.email %>
+		<%= model.username %>
+		<%= model.password %>
+		</li>
+	<% end %>
+</ul>
+<h1>Database Contents: Daily Quote</h1>
+<ul>
+	<% @motivations.each do |moti| %>
+		<li>
+		<%= moti.quote %>
+		</li>
+	<% end %>
+</ul>
+<h1>Database Contents: Dairy</h1>
+<ul>
+	<% @diaries.each do |diary| %>
+		<li>
+		<%= diary.date %>
+		<%= diary.entry %>
+		</li>
+	<% end %>
+</ul>
+<a href="/">Back to Home</a>

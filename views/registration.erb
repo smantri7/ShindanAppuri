@@ -28,33 +28,33 @@
     </div>
     <h1>登録ページ</h1>
     <body class="container">
-    	<form id='register' method='POST'
+    	<form id='register' action="/submit" method='POST'
 		accept-charset='UTF-8'>
 		<fieldset >
 		<legend>登録フォーム</legend>
 		<input type='hidden' name='submitted' id='submitted' value='1'/>
 		<div>
 		<label for='name' >お名前*: </label>
-		<input type='text' name='名前' id='name' maxlength="50" />
+		<input type='text' name='model[name]' id='name' maxlength="50" />
 		</div>
 		<div>
 		<label for='email' >電子メール*:</label>
-		<input type='text' name='電子メール' id='email' maxlength="50" />
+		<input type='text' name='model[email]' id='email' maxlength="50" />
 		</div>
 		<div>
 		<label for='username' >ユーザーネーム*:</label>
-		<input type='text' name='ユーザーネーム' id='username' maxlength="50" />
+		<input type='text' name='model[username]' id='username' maxlength="50" />
 		</div>
 		<div>
 		<label for='password' >パスワード*:</label>
-		<input type='password' name='パスワード' id='password' maxlength="50" />
+		<input type='password' name='model[password]' id='password' maxlength="50" />
 		</div>
 		<div>
 		<label for='passconf' >パスワード確認*:</label>
 		<input type='password' name='パスワード確認' id="passconf" maxlength="50"/>
 		</div>
 		<div>
-		<input type='submit' name='Submit' value='Submit' />
+		<input type='submit' value='Submit' />
 		</div>
 		</fieldset>
 		</form>
